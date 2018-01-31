@@ -1,0 +1,13 @@
+name: WorldGuardTitle
+version: 1.0
+main: me.droreo002.wtitle.MainPlugin
+depend: [WorldGuard]
+authors: [DrOreo002]
+description: World guard title plugin
+
+commands:
+  worldguardtitle:
+    aliases: [wtitle, wtl, wt, wgt]
+permission:
+  wtitle.admin:
+    default: op

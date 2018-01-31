@@ -1,0 +1,35 @@
+#First of all, I would like to thank you for downloading my plugin :3 ( Sorry 4 my bad English )
+#Please rate 5 if you found this plugin is useful for you or your server!
+#So, now I'll tell you how to create your custom title on a region.
+#First you'll need to copy and paste this 'rpg' section. Make sure you're not using tab. Use space only to arrange them at the correct pos
+#and rename it into any region name that you've created for example, you just created an region called "Village". So you'll need to change the "rpg" section
+#name into "Village". Also don't forget to use /rg flag Village title-on-exit allow. To make the title work!
+#and make sure you don't delete anything inside the 'rpg' section, after that. reload the plugin and enjoy :)
+
+Titles-Exit: #This titles will run when player exited the 'test' region. or any region that you make.
+  test:
+    title: 'Hello World' #MUST
+    sub-title: 'Enjoy your stay!' #OPTIONAL
+    fade-in: 10 #MUST
+    fade-out: 10 #MUST
+    stay: 20 #MUST
+    playsound: true
+    #Only runned if the playsound is true
+    sound-setting:
+      sound: BLOCK_NOTE_PLING #MUST
+      volume: 50 #MUST
+      pitch: 10 #OPTIONAL
+Titles-Enter: #This titles will run when player entered the 'test' region. or any region that you make.
+  test:
+    title: 'Hello World' #MUST
+    sub-title: 'Enjoy your stay!' #OPTIONAL
+    fade-in: 10 #MUST
+    fade-out: 10 #MUST
+    stay: 20 #MUST
+    playsound: true
+    #Only runned if the playsound is true
+    sound-setting:
+      sound: BLOCK_NOTE_PLING #MUST
+      volume: 50 #MUST
+      pitch: 10 #OPTIONAL
+
