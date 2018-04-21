@@ -38,6 +38,7 @@ public class SendTitleOnExitFlag extends Handler {
         }
     }
 
+
     private SendTitleOnExitFlag(Session session) {
         super(session);
     }
