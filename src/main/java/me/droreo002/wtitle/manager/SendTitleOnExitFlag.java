@@ -55,6 +55,10 @@ public class SendTitleOnExitFlag extends Handler {
                  }
                  for (String s : sec.getKeys(false)) {
                      if (s.equalsIgnoreCase(reg.getId())) {
+                         if (man.getConfig().getBoolean("Titles-Exit." + s + ".useAnimation")) {
+                             AnimationManager.sendAnimationTitle("Titles-Exit." + s, player);
+                             continue;
+                         }
                          String title = man.getConfig().getString("Titles-Exit." + s + ".title");
                          String sub_title = man.getConfig().getString("Titles-Exit." + s + ".sub-title");
                          int fade_in = man.getConfig().getInt("Titles-Exit." + s + ".fade-in");

@@ -43,6 +43,10 @@ public class SendTitleOnEnterFlag extends Handler {
                 }
                 for (String s : sec.getKeys(false)) {
                     if (s.equalsIgnoreCase(reg.getId())) {
+                        if (man.getConfig().getBoolean("Titles-Enter." + s + ".useAnimation")) {
+                            AnimationManager.sendAnimationTitle("Titles-Enter." + s, player);
+                            continue;
+                        }
                         String title = man.getConfig().getString("Titles-Enter." + s + ".title");
                         String sub_title = man.getConfig().getString("Titles-Enter." + s + ".sub-title");
                         int fade_in = man.getConfig().getInt("Titles-Enter." + s + ".fade-in");

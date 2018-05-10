@@ -12,24 +12,46 @@ Titles-Exit: #This titles will run when player exited the 'test' region. or any 
     sub-title: 'Enjoy your stay!' #OPTIONAL
     fade-in: 10 #MUST
     fade-out: 10 #MUST
-    stay: 20 #MUST
+    stay: 20 #MUST, Will be useless if useAnimation is true
     playsound: true
     #Only runned if the playsound is true
     sound-setting:
       sound: BLOCK_NOTE_PLING #MUST
       volume: 50 #MUST
       pitch: 10 #OPTIONAL
+    #Use animation?
+    useAnimation: true
+    animation-title: #Size must match the subtitle animation
+      - "&7[ &aHelloWorld &7]"
+      - "&7[ &cHelloWorld &7]"
+      - "&7[ &6HelloWorld &7]"
+    animation-subtitle: #Size must match the title animation
+      - "&aHelloWorld"
+      - "&cHelloWorld"
+      - "&6HelloWorld"
+    animationSpeed: 20 # This is in tick. Not second, So it will update 1 frame every 1 second. (20 Tick is 1 second)
 Titles-Enter: #This titles will run when player entered the 'test' region. or any region that you make.
   test:
     title: 'Hello World' #MUST
     sub-title: 'Enjoy your stay!' #OPTIONAL
     fade-in: 10 #MUST
     fade-out: 10 #MUST
-    stay: 20 #MUST
+    stay: 20 #MUST, Will be useless if useAnimation is true
     playsound: true
     #Only runned if the playsound is true
     sound-setting:
       sound: BLOCK_NOTE_PLING #MUST
       volume: 50 #MUST
       pitch: 10 #OPTIONAL
+    #Use animation?
+    useAnimation: true
+    animation-title: #Size must match the subtitle animation
+      - "&7[ &aHelloWorld &7]"
+      - "&7[ &cHelloWorld &7]"
+      - "&7[ &6HelloWorld &7]"
+    animation-subtitle: #Size must match the title animation
+      - "&aHelloWorld"
+      - "&cHelloWorld"
+      - "&6HelloWorld"
+    animationSpeed: 20 # This is in tick. Not second, So it will update 1 frame every 1 second. (20 Tick is 1 second)
 

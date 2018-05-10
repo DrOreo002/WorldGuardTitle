@@ -7,13 +7,19 @@ import me.droreo002.wtitle.manager.SendTitleOnExitFlag;
 import me.droreo002.wtitle.manager.TitleManager;
 import me.droreo002.wtitle.utils.FlagUtils;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class MainPlugin extends JavaPlugin {
 
     private TitleManager titleManager;
     private static WorldGuardPlugin worldGuardPlugin;
     private static ConfigManager configManager;
+    private final static Map<UUID, Integer> task = new HashMap<>();
 
     @Override
     public void onLoad() {
@@ -43,5 +49,9 @@ public class MainPlugin extends JavaPlugin {
 
     public static ConfigManager getConfigManager() {
         return configManager;
+    }
+
+    public static Map<UUID, Integer> getTask() {
+        return task;
     }
 }
