@@ -1,57 +1,49 @@
-#First of all, I would like to thank you for downloading my plugin :3 ( Sorry 4 my bad English )
-#Please rate 5 if you found this plugin is useful for you or your server!
-#So, now I'll tell you how to create your custom title on a region.
-#First you'll need to copy and paste this 'rpg' section. Make sure you're not using tab. Use space only to arrange them at the correct pos
-#and rename it into any region name that you've created for example, you just created an region called "Village". So you'll need to change the "rpg" section
-#name into "Village". Also don't forget to use /rg flag Village title-on-exit allow. To make the title work!
-#and make sure you don't delete anything inside the 'rpg' section, after that. reload the plugin and enjoy :)
+#   __          __        _     _  _____                     _ _______ _ _   _
+#   \ \        / /       | |   | |/ ____|                   | |__   __(_) | | |
+#    \ \  /\  / /__  _ __| | __| | |  __ _   _  __ _ _ __ __| |  | |   _| |_| | ___
+#     \ \/  \/ / _ \| '__| |/ _` | | |_ | | | |/ _` | '__/ _` |  | |  | | __| |/ _ \
+#      \  /\  / (_) | |  | | (_| | |__| | |_| | (_| | | | (_| |  | |  | | |_| |  __/
+#       \/  \/ \___/|_|  |_|\__,_|\_____|\__,_|\__,_|_|  \__,_|  |_|  |_|\__|_|\___|
+#
+#
+# This is the example data, I separate it because comments are not supported on data file
+# Your data should just look like this. If there's something different then it means that I forgot to update the wiki
+# please remind if you found any.
 
-Titles-Exit: #This titles will run when player exited the 'test' region. or any region that you make.
-  test:
-    title: 'Hello World' #MUST
-    sub-title: 'Enjoy your stay!' #OPTIONAL
-    fade-in: 10 #MUST
-    fade-out: 10 #MUST
-    stay: 20 #MUST, Will be useless if useAnimation is true
-    playsound: true
-    #Only runned if the playsound is true
-    sound-setting:
-      sound: BLOCK_NOTE_PLING #MUST
-      volume: 50 #MUST
-      pitch: 10 #OPTIONAL
-    #Use animation?
-    useAnimation: true
-    animation-title: #Size must match the subtitle animation
-      - "&7[ &aHelloWorld &7]"
-      - "&7[ &cHelloWorld &7]"
-      - "&7[ &6HelloWorld &7]"
-    animation-subtitle: #Size must match the title animation
-      - "&aHelloWorld"
-      - "&cHelloWorld"
-      - "&6HelloWorld"
-    animationSpeed: 20 # This is in tick. Not second, So it will update 1 frame every 1 second. (20 Tick is 1 second)
-Titles-Enter: #This titles will run when player entered the 'test' region. or any region that you make.
-  test:
-    title: 'Hello World' #MUST
-    sub-title: 'Enjoy your stay!' #OPTIONAL
-    fade-in: 10 #MUST
-    fade-out: 10 #MUST
-    stay: 20 #MUST, Will be useless if useAnimation is true
-    playsound: true
-    #Only runned if the playsound is true
-    sound-setting:
-      sound: BLOCK_NOTE_PLING #MUST
-      volume: 50 #MUST
-      pitch: 10 #OPTIONAL
-    #Use animation?
-    useAnimation: true
-    animation-title: #Size must match the subtitle animation
-      - "&7[ &aHelloWorld &7]"
-      - "&7[ &cHelloWorld &7]"
-      - "&7[ &6HelloWorld &7]"
-    animation-subtitle: #Size must match the title animation
-      - "&aHelloWorld"
-      - "&cHelloWorld"
-      - "&6HelloWorld"
-    animationSpeed: 20 # This is in tick. Not second, So it will update 1 frame every 1 second. (20 Tick is 1 second)
+# Copy and paste this into a blank .yml file then transfer it into "titles" folder
+# then rename the .yml file to specify the title name
+Data:
+  title:
+    title: 'Hello World'
+    sub-title: 'Enjoy your stay!'
+    fade-in: 10
+    fade-out: 10
+    stay: 20
+  # Should we play the sound?
+  playsound: true
+  # Will only be sent if play-sound is true
+  sound:
+    sound: BLOCK_NOTE_PLING
+    volume: 50
+    pitch: 10
+  # Should we use animation?
+  useAnimation: true
+  # The title animation. Separated by <|> the first is the title and the second is the subtitle
+  # also if the title animation is enabled the default title will not be used
+  # The fade in will automatically be 0, same as fade out. But stay will follow the animationSpeed value
+  animation:
+    - "&7[ &aHelloWorld &7] <|> This is the subtitle!"
+    - "&7[ &cHelloWorld &7] <|> This is the subtitle!"
+    - "&7[ &6HelloWorld &7] <|> This is the subtitle!"
+  # In tick (20 tick = 1 second)
+  animationSpeed: 5
+  # Should we send a message to player?
+  sendMessage: true
+  # The message, will be sent if sendMessage is true
+  message: '&7[ &bTestRegion &7]&f Hi!, please enjoy your stay!'
+  # There's 2 type ENTER and EXIT, to specify when to send
+  # the title to the player
+  titleType: 'ENTER'
+  # The target region of this title
+  region: 'my-region'
 
